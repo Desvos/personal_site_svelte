@@ -1,7 +1,9 @@
 <script>
     import { AppBar, Button, Icon } from "svelte-materialify";
     import { mdiMenu } from "@mdi/js";
-    import Grid from "svelte-grid-responsive";
+    import pagesList from "$lib/pagesList";
+    import socials from "$lib/socials";
+
 </script>
 
 <span class="bg" />
@@ -10,21 +12,33 @@
         <AppBar flat>
             <span slot="title">Title</span>
             <div style="flex-grow:1" />
-            <Button text rounded><span style="text-decoration: none !important;">Work Experience</span></Button>
 
+            <div class="app-bar-links-expanded">
+                {#each pagesList as page}
+                    <Button text rounded>
+                        <a href={"/template-1"+page.link}>{page.name}</a>
+                    </Button>
+                {/each}
+            </div>
 
-            <Button fab depressed>
-                <Icon path={mdiMenu} />
-            </Button>
+            <div class="app-bar-links-expanded">
+                <Button fab depressed>
+                    <Icon path={mdiMenu} />
+                </Button>
+            </div>
         </AppBar>
 
-        <slot />
-        <Grid container gutter={12}>
-            <Grid xs={12} md={4} lg={3}>xs=12 md=4 lg=3</Grid>
-            <Grid xs={12} md={4} lg={3}>xs=12 md=4 lg=3</Grid>
-            <Grid xs={12} md={4} lg={3}>xs=12 md=4 lg=3</Grid>
-            <Grid xs={12} md={4} lg={3}>xs=12 md=4 lg=3</Grid>
-        </Grid>
+        <div class="content-container">
+            <slot />
+        </div>
+        
+        <div class="footer">
+            {#each socials as social}
+                <Button fab depressed>
+                    <a href={social.link} target="_blank"><Icon class="mdi mdi-home" /></a>
+                </Button>
+            {/each}
+        </div>
     </div>
 </div>
 
