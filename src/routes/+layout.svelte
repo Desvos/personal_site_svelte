@@ -1,39 +1,52 @@
 <script>
-    import { MaterialApp, Footer, Button,  } from 'svelte-materialify';
-    import { page } from '$app/stores';
+    import { page } from "$app/stores";
+    import templatesList from "$lib/templatesList";
 
     let now = new Date();
     let year = now.getFullYear();
-
-    let links = [
-        { 
-            "name": "Template 1",
-            "href": "/template-1/"
-        },
-    ]
 </script>
 
-<MaterialApp>
-    <slot />
+<slot />
 
-    {#if !$page.error}
-        <Footer padless class="grey darken-2 theme--dark justify-center" style="position: fixed; bottom: 0; width: 100%;">
-            <div>
-                {#each links as link}
-                    <Button rounded text size="xs"><a href="{link.href}" class="template_link">{link.name}</a></Button>
-                {/each}
-            </div>
-            <div class="grey pa-1 text-center" style="width:100%">
-                &copy; Copyright Antonio De Vivo {year} -
-                Builded with 
-                <b>Svelte</b> - 
-                <b>Svelte Kit</b> - 
-                <b>Svelte Materialify</b>
-            </div>
-        </Footer>
-    {/if}
-</MaterialApp>
+{#if !$page.error}
+<footer class="footer bg-dark text-center text-white">
+
+    <div class="container p-2">
+        {#each templatesList as template}
+            <a href={template.href}>
+                <button
+                    type="button"
+                    class="btn btn-outline-light btn-rounded btn-sm"
+                    text-white
+                >
+                    {template.name}
+                </button>
+            </a>
+        {/each}
+    </div>
+
+    <div
+        class="copyright-container text-center"
+    >
+        &copy; Copyright Antonio De Vivo {year} - Builded with
+        <b><a class="text-white" href="https://svelte.dev/" target="_blank">Svelte</a></b> -
+        <b><a class="text-white" href="https://kit.svelte.dev/" target="_blank">Svelte Kit</a></b> -
+        <b><a class="text-white" href="https://getbootstrap.com/" target="_blank">Bootstrap</a></b> -
+        <b><a class="text-white" href="https://mdbootstrap.com/" target="_blank">MDB</a></b>
+    </div>
+</footer>
+
+{/if}
 
 <style>
-.template_link { text-decoration: none; }
+
+footer.footer{
+    position: fixed;
+    bottom: 0; 
+    width: 100%;
+}
+
+footer .copyright-container {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 </style>

@@ -1,5 +1,4 @@
 <script>
-    import { ProgressCircular } from 'svelte-materialify';
     import { browser } from "$app/environment";
 
     if (browser) {
@@ -9,5 +8,7 @@
 </script>
 
 <div class="d-flex justify-center align-center" style="margin-top: 200px;">
-    <ProgressCircular size={70} width={7} indeterminate color="indigo" />
+    <div class="spinner-grow text-primary" style="width: 5rem; height: 5rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
 </div>
