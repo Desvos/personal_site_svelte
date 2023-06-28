@@ -4,7 +4,7 @@
 
     if (browser) {
         // to prevent error window is not defined, because it's SSR
-        window.location.href = "/template-1/";
+        window.location.href = "/templates/1/";
     }
 </script>
 

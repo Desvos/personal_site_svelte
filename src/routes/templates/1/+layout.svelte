@@ -1,5 +1,5 @@
 <script>
-    import { AppBar, Button, Icon } from "svelte-materialify";
+    import { AppBar, Button, Icon, Menu, ListItem } from "svelte-materialify";
     import { mdiMenu } from "@mdi/js";
     import pagesList from "$lib/pagesList";
     import socials from "$lib/socials";
@@ -16,15 +16,24 @@
             <div class="app-bar-links-expanded">
                 {#each pagesList as page}
                     <Button text rounded>
-                        <a href={"/template-1"+page.link}>{page.name}</a>
+                        <a style="text-decoration: none;" href={"/templates/1"+page.link}>{page.name}</a>
                     </Button>
                 {/each}
             </div>
 
-            <div class="app-bar-links-expanded">
-                <Button fab depressed>
-                    <Icon path={mdiMenu} />
-                </Button>
+            <div class="app-bar-links-bread">
+                <Menu right>
+                    <div slot="activator">
+                        <Button fab depressed>
+                            <Icon path={mdiMenu} />
+                        </Button>
+                    </div>
+                    {#each pagesList as page}
+                        <ListItem>
+                            <a style="text-decoration: none;" href={"/templates/1"+page.link}>{page.name}</a>
+                        </ListItem>
+                    {/each}
+                </Menu>
             </div>
         </AppBar>
 
