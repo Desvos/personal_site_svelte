@@ -7,8 +7,10 @@
     }
 </script>
 
-<div class="d-flex justify-center align-center" style="margin-top: 200px;">
-    <div class="spinner-grow text-primary" style="width: 5rem; height: 5rem;" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
+<div class="row" style="margin-top: 200px;">
+    <div class="col text-center">
+        <div class="spinner-grow text-primary" style="width: 5rem; height: 5rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
 </div>

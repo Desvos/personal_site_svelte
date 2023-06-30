@@ -4,16 +4,14 @@
 </script>
 
 <span class="bg" />
-<div class="d-flex justify-center main-container">
-    <div class="sub-container">
+<div class="d-flex justify-content-center">
+    <div class="col-md-9 sub-container">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <!-- Container wrapper -->
             <div class="container-fluid">
-                <div>
-                    <a class="text-reset me-3" href="#">
-                        <i class="fas fa-shopping-cart" />
-                    </a>
+                <div class="logo-t1">
+                    <h4>Antonio De Vivo</h4>
                 </div>
                 <!-- Collapsible wrapper -->
 
@@ -39,7 +37,7 @@
                             data-mdb-toggle="dropdown"
                             class="dropdown-toggle"
                         >
-                            <i class="fas fa-bars" />
+                            <i class="fa-solid fa-bars"></i>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             {#each pagesList as page}
