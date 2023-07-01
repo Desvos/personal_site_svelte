@@ -1,3 +1,7 @@
-<h1>Welcome to Work</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import MarkdownFileViewer from '$lib/components/MarkdownFileViewer.svelte';
 
+    let filePath = "/markdown/work-experience.md"
+</script>
+
+<MarkdownFileViewer bind:markdownFilePath={filePath} />

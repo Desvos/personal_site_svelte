@@ -1,11 +1,13 @@
 <script>
     import pagesList from "$lib/pagesList";
     import socials from "$lib/socials";
+
+    const TEMPLATE_ROOT = "/templates/1"
 </script>
 
 <span class="bg" />
-<div class="d-flex justify-content-center">
-    <div class="col-md-9 sub-container">
+<div class="d-flex justify-content-center main-container">
+    <div class="col-12 col-lg-9 sub-container">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <!-- Container wrapper -->
@@ -22,7 +24,7 @@
                             <li class="nav-item">
                                 <a
                                     class="nav-link"
-                                    href={"/templates/1" + page.link}
+                                    href={TEMPLATE_ROOT + page.link}
                                     >{page.name}</a
                                 >
                             </li>
@@ -44,7 +46,7 @@
                                 <li>
                                     <a
                                         class="dropdown-item"
-                                        href={"/templates/1" + page.link}
+                                        href={TEMPLATE_ROOT + page.link}
                                         >{page.name}</a
                                     >
                                 </li>
