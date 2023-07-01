@@ -4,11 +4,17 @@
     .bg-t2 {
         background-color: #fff;
     }
+    .bgr-t2 {
+        background-color: #fff;
+    }
 }
 
 @media screen and (max-width: 989px) {
     /*Additional Global  CSS styles for mobile phones go here */
     .bg-t2 {
+        background-color: #fff;
+    }
+    .bgr-t2 {
         background-color: #fff;
     }
 }
@@ -25,4 +31,8 @@
     left: 0;
     background-size: cover;
     transform: scale(1);
+}
+
+.bgr-t2 {
+    position: relative;
 }

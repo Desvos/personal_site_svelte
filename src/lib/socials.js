@@ -1,5 +1,10 @@
 export default [
     {
+        name: "Email",
+        link: "mailto:antonio.devivo@yahoo.com",
+        icon: "fa-solid fa-envelope"
+    },
+    {
         name: "Skype",
         link: "https://join.skype.com/invite/jTxalLV1hmnI",
         icon: "fa-brands fa-skype"

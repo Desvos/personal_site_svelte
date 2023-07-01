@@ -1,5 +1,7 @@
 <div class="bg-t2">
-    <slot />
+    <div class="bgr-t2">
+        <slot />
+    </div>
 </div>
 
 <style>

@@ -9,7 +9,7 @@
 </script>
 
 <div class="bg-t1">
-    <div class="d-flex justify-content-center main-container">
+    <div class="d-flex justify-content-center bgr-t1 main-conteiner">
         <div class="col-12 col-lg-9 sub-container">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg">

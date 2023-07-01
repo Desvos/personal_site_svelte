@@ -16,7 +16,7 @@ export default [
         link: "/portfolio"
     },
     {
-        name: "Contacts",
-        link: "/contacts"
+        name: "Contact Form",
+        link: "/contact-form"
     },
 ]

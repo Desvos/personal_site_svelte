@@ -1,4 +1,4 @@
-<script context="module">
+<script>
     import { page } from "$app/stores";
     import templatesList from "$lib/templatesList";
 
