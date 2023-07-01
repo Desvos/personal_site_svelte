@@ -1,5 +1,5 @@
 <script>
-    import { env } from '$env/dynamic/private'
+    import { PUBLIC_EMAILJS_PUBLIC_KEY } from '$env/static/public';
     import emailjs from "@emailjs/browser";
 
     function sendEmail(e) {
@@ -8,7 +8,7 @@
                 "service_personal_site_1",          //"YOUR_SERVICE_ID"
                 "template_personal_site_1",         //"YOUR_TEMPLATE_ID"
                 e.target,
-                env.EMAILJS_PUBLIC_KEY      //"YOUR_PUBLIC_KEY"
+                PUBLIC_EMAILJS_PUBLIC_KEY           //"YOUR_PUBLIC_KEY"
             )
             .then(
                 (result) => {

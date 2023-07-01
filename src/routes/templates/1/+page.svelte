@@ -1,3 +1,7 @@
+<script>
+    import { curriculum as curriculumLink } from "$lib/otherLinks";
+</script>
+
 
 <div class="row justify-content-center">
     <div class="col-12 col-lg-3 text-center">
@@ -9,6 +13,13 @@
         <span style="font-size: 18px;">
             I have been working in the software development field for over 4 years. I enjoy exploring new technologies and work methodologies. 
         </span>
+        <br><br>
+        <a href={curriculumLink} target="_blank">
+            <button type="button" class="btn text-white btn-rounded" style="background-color: #007ced;">Download CV</button>
+        </a>
+        <a href="/templates/1/contact-form">
+            <button type="button" class="btn btn-rounded" style="background-color: #d8d8d8;">Contact</button>
+        </a>
     </div>
 </div>
 
