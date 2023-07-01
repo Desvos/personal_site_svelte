@@ -1,0 +1,28 @@
+
+@media screen and (min-width: 990px) {
+    /* For tablets and desktop: */
+    .bg-t2 {
+        background-color: #fff;
+    }
+}
+
+@media screen and (max-width: 989px) {
+    /*Additional Global  CSS styles for mobile phones go here */
+    .bg-t2 {
+        background-color: #fff;
+    }
+}
+
+
+/* Background code --------------------*/
+.bg-t2 {
+    width: 100%;
+    height: 9000px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    transform: scale(1);
+}

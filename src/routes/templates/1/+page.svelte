@@ -17,14 +17,14 @@
 <!--What I Do-->
 <div class="col-4 col-sm-3 col-md-2"><h3 class="block-title">What I Do</h3></div>
 <div class="row">
-    <div class="col-1 col-lg-1"><i class="fas fa-sitemap block-icon"></i></div>
-    <div class="col-11 col-lg-5">
+    <div class="col-1 col-lg-1 mt-3"><i class="fas fa-sitemap block-icon"></i></div>
+    <div class="col-11 col-lg-5 mt-3">
         <b>Devops</b><br>
         I supervise infrastucture with following technologies:<br>
         Docker, Docker Swarm, Ansible, Ansible AWX, Jenkins, Terraform, Prometheus, Grafana, Kibana, Elasticsearch, Google Cloud Platform
     </div>
-    <div class="col-1 col-lg-1"><i class="fas fa-cloud block-icon"></i></div>
-    <div class="col-11 col-lg-5">
+    <div class="col-1 col-lg-1 mt-3"><i class="fas fa-cloud block-icon"></i></div>
+    <div class="col-11 col-lg-5 mt-3">
         <b>Web Development</b><br>
         I build web software solutions with following technologies:<br>
         Django, Django REST Framework, Flask, SQLAlchemy, Flask-Marshmallow, Vue.Js, Nuxt.Js, Svelte, Svelte Kit, Bootstrap, MDB
@@ -34,10 +34,13 @@
 <br>
 
 <div class="row">
-    <div class="col-1 col-lg-1"><i class="fab fa-php block-icon"></i></div>
+    <div class="col-1 col-lg-1"><i class="fab fa-python block-icon"></i></div>
     <div class="col-11 col-lg-5">
         <b>Refactoring and Testing</b><br>
-        I supervise infrastucture with following technologies:<br>
-        Docker, Docker Swarm, Ansible, Ansible AWX, Jenkins, Terraform, Prometheus, Grafana, Kibana, Elasticsearch, Google Cloud Platform
+        I'm able to testing and refactoring on different frameworks:<br>
+        Laravel -> Django/DRF, Pytest, Django Test
     </div>
 </div>
+
+
+<br><br>
