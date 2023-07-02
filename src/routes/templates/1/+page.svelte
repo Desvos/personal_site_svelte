@@ -1,5 +1,5 @@
 <script>
-    import { curriculum as curriculumLink } from "$lib/otherLinks";
+    import otherLinks from "$lib/otherLinks";
 </script>
 
 
@@ -14,7 +14,7 @@
             I have been working in the software development field for over 4 years. I enjoy exploring new technologies and work methodologies. 
         </span>
         <br><br>
-        <a href={curriculumLink} target="_blank">
+        <a href={otherLinks.curriculum} target="_blank">
             <button type="button" class="btn text-white btn-rounded" style="background-color: #007ced;">Download CV</button>
         </a>
         <a href="/templates/1/contact-form">
