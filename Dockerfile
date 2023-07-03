@@ -10,12 +10,15 @@ RUN npm run build
 #-------------------
 
 #Deploy Image
-FROM nginx:1.19-alpine
+FROM node:18-alpine AS deploy-node
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /app
 
 RUN rm -rf ./*
 
+COPY --from=build /app/package.json .
 COPY --from=build /app/build .
 
-ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+RUN npm install
+
+ENTRYPOINT [ "node", "index.js" ]

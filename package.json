@@ -20,6 +20,7 @@
 	"type": "module",
 	"dependencies": {
 		"@emailjs/browser": "^3.11.0",
-		"showdown": "^2.1.0"
+		"showdown": "^2.1.0",
+		"svelte-preprocess": "^5.0.4"
 	}
 }
