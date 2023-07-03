@@ -1,6 +1,15 @@
 <script>
     import { PUBLIC_EMAILJS_PUBLIC_KEY } from '$env/static/public';
+    import { browser } from "$app/environment";
+    import { sleep } from "$lib/js-modules";
     import emailjs from "@emailjs/browser";
+
+    function resetForm(){
+        if (browser) {
+            var contactForm = document.getElementById("contactForm");
+            contactForm.reset()
+        }
+    }
 
     function sendEmail(e) {
         emailjs
@@ -12,10 +21,11 @@
             )
             .then(
                 (result) => {
-                    console.log("SUCCESS!", result.text);
+                    alert("Your email has been sent. Thank you for reaching out!")
+                    resetForm()
                 },
                 (error) => {
-                    console.log("FAILED...", error.text);
+                    alert("Sending failed...Retry later or write on my email directly: antonio.devivo@yahoo.com")
                 }
             );
     }
@@ -23,7 +33,7 @@
 
 <h1 class="text-center">Contact Form</h1>
 
-<form on:submit|preventDefault={sendEmail}>
+<form id="contactForm" on:submit|preventDefault={sendEmail}>
     <div class="row">
         <div class="col-12 col-lg-6">
             <!-- name -->

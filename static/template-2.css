@@ -21,10 +21,10 @@
 
 
 /* Background code --------------------*/
-.bg-t2 {
+.bg-t1 {
     width: 100%;
-    height: 9000px;
-    position: relative;
+    height: 100%;
+    position: absolute;
     background-repeat: no-repeat;
     background-position: center;
     top: 0;
@@ -33,6 +33,6 @@
     transform: scale(1);
 }
 
-.bgr-t2 {
+.bgr-t1 {
     position: relative;
 }
