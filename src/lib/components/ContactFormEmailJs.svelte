@@ -4,6 +4,8 @@
     import { showSuccessToast, showErrorToast } from "$lib/toast-actions";
     import emailjs from "@emailjs/browser";
 
+    let formIsSending = false
+
     function resetForm(){
         if (browser) {
             var contactForm = document.getElementById("contactForm");
@@ -12,6 +14,7 @@
     }
 
     function sendEmail(e) {
+        formIsSending = true
         emailjs
             .sendForm(
                 "service_personal_site_1",          //"YOUR_SERVICE_ID"
@@ -21,10 +24,12 @@
             )
             .then(
                 (result) => {
+                    formIsSending = false
                     showSuccessToast("Your email has been sent. Thank you for reaching out!")
                     resetForm()
                 },
                 (error) => {
+                    formIsSending = false
                     showErrorToast("Sending failed...Retry later or write on my email directly: antonio.devivo@yahoo.com")
                 }
             );
@@ -96,5 +101,16 @@
 
     <br />
 
-    <button type="submit" id="cf_submit" class="btn btn-primary">Submit</button>
+    {#if !formIsSending}
+        <button type="submit" id="cf_submit" class="btn btn-primary btn-rounded">Submit</button>
+    {:else}
+        <button type="submit" id="cf_submit" class="btn btn-primary btn-rounded" disabled>
+            Submit &nbsp;
+            <div class="spinner-border spinner-border-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </button>
+    {/if}
+    
+    
 </form>
