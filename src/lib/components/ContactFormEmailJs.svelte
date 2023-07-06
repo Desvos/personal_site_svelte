@@ -1,7 +1,7 @@
 <script>
     import { PUBLIC_EMAILJS_PUBLIC_KEY } from '$env/static/public';
     import { browser } from "$app/environment";
-    import { sleep } from "$lib/js-modules";
+    import { showSuccessToast, showErrorToast } from "$lib/toast-actions";
     import emailjs from "@emailjs/browser";
 
     function resetForm(){
@@ -21,11 +21,11 @@
             )
             .then(
                 (result) => {
-                    alert("Your email has been sent. Thank you for reaching out!")
+                    showSuccessToast("Your email has been sent. Thank you for reaching out!")
                     resetForm()
                 },
                 (error) => {
-                    alert("Sending failed...Retry later or write on my email directly: antonio.devivo@yahoo.com")
+                    showErrorToast("Sending failed...Retry later or write on my email directly: antonio.devivo@yahoo.com")
                 }
             );
     }

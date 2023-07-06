@@ -1,10 +1,30 @@
 <script>
     import { page } from "$app/stores";
+    import { fly } from 'svelte/transition';
     import templatesList from "$lib/templatesList";
+    import { toast } from "$lib/stores/toast";
 
     let now = new Date();
     let year = now.getFullYear();
+
+    let thisToast;
+    toast.subscribe((value) => {
+		thisToast = value;
+	});
 </script>
+
+{#if thisToast.show }
+    <div class="p-toast {thisToast.type}" in:fly={{ x: -200, duration: 300, delay: 300 }} out:fly={{ x: 300, duration: 300 }}>
+        <div class="p-toast-container">
+            <div class="p-toast-title">
+                {thisToast.title}
+            </div>
+            <div class="p-toast-message">
+                {thisToast.message}
+            </div>
+        </div>
+    </div>
+{/if}
 
 <slot />
 

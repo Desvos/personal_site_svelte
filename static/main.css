@@ -57,3 +57,83 @@
     text-align: center;
     background-color: #3a2d2d;
 }
+
+.p-toast {
+    top: 0;
+    right: 0;
+    border-radius: 20px !important;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,.1);
+    position: fixed;
+}
+
+.p-toast .p-toast-container {
+    position: relative;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.p-toast.default {
+    color: #000000;
+}
+
+.p-toast .p-toast-title {
+    padding: 5px 10px 5px 20px;
+    border-top-left-radius: 20px;;
+}
+
+.p-toast .p-toast-message {
+    height: 100%;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.p-toast.default .p-toast-title {
+    background-color: #ffffff;
+}
+
+.p-toast.default .p-toast-message {
+    background-color: #ffffff;
+}
+
+.p-toast.success {
+    color: black;
+}
+
+.p-toast.success .p-toast-title {
+    background-color: #47ff8b;
+}
+
+.p-toast.success .p-toast-message {
+    background-color: #009938;
+    color: white;
+}
+
+
+.p-toast.error {
+    color: white;
+}
+
+.p-toast.error .p-toast-title {
+    background-color: #ff5959;
+}
+
+.p-toast.error .p-toast-message {
+    background-color: #c91e1e;
+}
+
+
+@media screen and (min-width: 990px) {
+    /* For tablets and desktop: */
+    .p-toast {
+        width: 30%;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 989px) {
+    /*Additional Global  CSS styles for mobile phones go here */
+    .p-toast {
+        width: 100%;
+        height: 100px;
+    }
+}
