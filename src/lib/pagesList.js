@@ -1,22 +1,22 @@
 export default [
     {
         name: "Home",
-        link: "/"
+        href: ""
     },
     {
         name: "Work Experience",
-        link: "/work-experience"
+        href: "work-experience"
     },
     {
         name: "Education",
-        link: "/education"
+        href: "education"
     },
     {
         name: "Portfolio",
-        link: "/portfolio"
+        href: "portfolio"
     },
     {
         name: "Contact Form",
-        link: "/contact-form"
+        href: "contact-form"
     },
 ]

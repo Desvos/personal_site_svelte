@@ -27,7 +27,7 @@
                                 <li class="nav-item">
                                     <a
                                         class="nav-link"
-                                        href={TEMPLATE_ROOT + page.link}
+                                        href={TEMPLATE_ROOT + "/" + page.href}
                                         >{page.name}</a
                                     >
                                 </li>
@@ -49,7 +49,7 @@
                                     <li>
                                         <a
                                             class="dropdown-item"
-                                            href={TEMPLATE_ROOT + page.link}
+                                            href={TEMPLATE_ROOT + "/" + page.href}
                                             >{page.name}</a
                                         >
                                     </li>

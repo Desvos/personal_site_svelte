@@ -1,8 +1,18 @@
+<svelte:head>
+    <title>{pageName} - Antonio De Vivo</title> 
+</svelte:head>
+
 <script>
     import { page } from "$app/stores";
     import { fly } from 'svelte/transition';
     import templatesList from "$lib/templatesList";
+    import { getTemplatesPageName } from "$lib/js-modules";
     import { toast } from "$lib/stores/toast";
+
+    export let data
+
+    let pageName = ''
+    $: pageName = getTemplatesPageName(data.url);
 
     let now = new Date();
     let year = now.getFullYear();

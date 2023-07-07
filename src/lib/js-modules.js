@@ -1,3 +1,5 @@
+import pagesList from "./pagesList";
+
 export function sleep(ms) {
   /***
    * Example of usage
@@ -19,4 +21,26 @@ export function updateStoreObject(storeObject, obj={}){
     }
     return so;
   })
+}
+
+export function getTemplatesUrlHref(url) {
+  /* if (browser) {
+    url = window.location.href
+  } */
+
+  let urlSplitted = url.split('/')
+  
+  if(urlSplitted[urlSplitted.length - 1] == "")
+    urlSplitted.pop()
+
+  return urlSplitted[urlSplitted.length - 2] == "templates" ? "" : urlSplitted[urlSplitted.length - 1]
+}
+
+export function getTemplatesPageName(url) {
+  let href = getTemplatesUrlHref(url);
+
+  for(let page of pagesList) {
+    if (page.href == href)
+      return page.name;
+  }
 }
